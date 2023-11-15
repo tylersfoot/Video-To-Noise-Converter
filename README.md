@@ -6,10 +6,12 @@ I saw this effect on YouTube [link] and I wanted to recreate it. Basically, this
 
 ## Example
 Original Bad Apple animation:
-https://github.com/tylersfoot/Video-To-Noise-Converter/assets/93095330/a8625c11-36fc-49b6-9fdf-b99a665560b2
+![](https://github.com/tylersfoot/Video-To-Noise-Converter/assets/93095330/a8625c11-36fc-49b6-9fdf-b99a665560b2)
+![](examples/badapple.mp4)
 
 Converted Bad Apple animation:
-https://github.com/tylersfoot/Video-To-Noise-Converter/assets/93095330/a9eb2f27-1b8a-4dae-913f-2ee6406a4a1b
+![](https://github.com/tylersfoot/Video-To-Noise-Converter/assets/93095330/a9eb2f27-1b8a-4dae-913f-2ee6406a4a1b)
+![](examples/badapplenoise.mp4)
 
 ## Installation/Usage
 - Download and install [Python](https://www.python.org/downloads/).
