@@ -7,7 +7,7 @@ I saw this effect on YouTube [link] and I wanted to recreate it. Basically, this
 ## Installation/Usage
 - Download and install [Python](https://www.python.org/downloads/).
 - Download the [latest release](https://github.com/tylersfoot/Video-To-Noise-Converter/releases) and extract the zip file.
-- Navigate to the folder in a terminal and install the required packages using `py -m pip install -r requirements.txt`
+- Navigate to the directory in a terminal and install the required packages using `py -m pip install -r requirements.txt`
 - Make sure your video is an mp4. If not, you can easily convert it using [this site](https://cloudconvert.com).
 - Rename your input video to `input.mp4` and put it in the folder.
 - Run `py main.py`. Progress on the conversion will be shown in the console.
