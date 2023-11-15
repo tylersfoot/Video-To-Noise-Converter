@@ -5,13 +5,13 @@ import cv2
 import time
 
 def combine_frames(bw_frame, noise_image):
-    # Create a copy of the noise image to avoid modifying the original
+    # create a copy of the noise image to avoid modifying the original
     noise_array = noise_image.copy()
 
-    # Create a boolean mask for pixels that are black in the bw_frame
+    # create a boolean mask for pixels that are black in the bw_frame
     mask_black_pixels = bw_frame[:, :, 0] == 0
 
-    # Invert the color of the corresponding pixels in the noise image using the mask
+    # invert the color of the corresponding pixels in the noise image using the mask
     noise_array[mask_black_pixels] = 255 - noise_array[mask_black_pixels]
 
     return noise_array
@@ -29,18 +29,11 @@ def combine_videos(output_video_path, video, noise_image):
     combined_clip.write_videofile(output_video_path, codec='libx264', verbose=False)
 
 def main():
-    output_folder = './videos/'
+    output_folder = './'
     input_video_name = 'input.mp4'
     final_video_name = 'output.mp4'
 
     start_time = time.time()
-    
-    # clean output folder
-    files_to_keep = ['input.mp4']
-    for file in os.listdir(output_folder):
-        if file not in files_to_keep:
-            file_path = os.path.join(output_folder, file)
-            os.remove(file_path)
 
     # load input video
     video = mp.VideoFileClip(output_folder + input_video_name)
@@ -64,6 +57,7 @@ Total Number of Pixels: {(int(video.fps * video.duration))*(video.size[0]*video.
     # combine the black and white video and the noise video
     combine_videos(output_folder + final_video_name, video, noise_image)
     
+    # calculate time elapsed
     total_time = time.time() - start_time
     print(f'Total time taken: {total_time:.2f} seconds')
 
